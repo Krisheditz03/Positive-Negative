@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postive & Negative</title>
+</head>
+<body style="background: linear-gradient(#FFA17F,#00223E); background-repeat: no-repeat; height: 100vh;">
+    <h1 style="text-align: center;">Number Sign Checker</h1><br><br>
+    
+        <div style="text-align: center;">
+            <label for="pn">Enter a number :</label>
+            <input style="border: 2px solid red; border-radius: 5px;" type="text" id="pn"><br><br>
+
+            <button style="border: 2px solid red; border-radius: 5px; background-color: yellow;" onclick="check()">Check</button><br><br>
+
+            <label for="ans">The Number is :</label>
+            <p id="ans"></p>
+
+        </div>
+    
+
+    <script>
+        function check() {
+           
+            var number = parseInt(document.getElementById("pn").value);
+
+            if(number > 0){
+               document.getElementById("ans").innerHTML = "Positive"
+            }else if(number == 0){
+               document.getElementById("ans").innerHTML = "Zero"
+            }else{
+               document.getElementById("ans").innerHTML = "Negative"
+            }
+        }
+        
+    </script>
+</body>
+</html>
